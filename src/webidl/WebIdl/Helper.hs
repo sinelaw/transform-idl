@@ -62,9 +62,6 @@ cppOpts = defaultCpphsOptions { boolopts=defaultBoolOptions { locations = False,
 cpp :: String -> IO String
 cpp = runCpphs cppOpts ""
 
-deriving instance Show BoolOptions
-deriving instance Show CpphsOptions 
-
 cppFile :: String -> IO String
 cppFile file = cpp =<< readFile file
 
